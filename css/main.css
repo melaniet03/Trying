@@ -85,9 +85,9 @@ span {
   #hello .background {
     background: 50% 50% / cover;
     background-attachment: fixed;
-    background-color: ;
+    background-color: #FCD5CE ;
     background-image: url("Trying/img/sky.jpg");
-    background-position: center center;
+    background-position: ;
     height: 100%; }
 
 #bio {
