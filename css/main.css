@@ -20,7 +20,7 @@ body {
   transform-style: preserve-3d; }
 
 a {
-  color: #FFF; }
+  color: #81B29A; }
 
 a:hover {
   text-decoration: underline; }
@@ -44,7 +44,7 @@ h1 {
   width: 100%; }
 
 span {
-  color: #C9710C; }
+  color: #BDB2FF; }
 
 /* ==========================================================================
    Parallax
@@ -106,7 +106,7 @@ span {
       top: 0;
       left: 0;
       font-size: 12px;
-      color: white;
+      color: #81B29A;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 20px;
@@ -115,7 +115,7 @@ span {
       position: absolute;
       bottom: 0px;
       left: 0px;
-      color: #021326;
+      color: #0077B6;
       font-family: "Roboto Slab", serif;
       font-weight: 300;
       line-height: 1.4;
