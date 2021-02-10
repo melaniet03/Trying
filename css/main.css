@@ -92,12 +92,14 @@ span {
 
 #bio {
   padding: 10% 25px;
-  text-align: left; }
+  text-align: center; }
   #bio .bio-item {
     display: inline-block;
     height: auto;
     padding: 25px;
     width: 33%; }
+    font-size: 40px
+    color: #DEE2FF
     #bio .bio-item .content {
       width: 100%;
       height: 100%; }
