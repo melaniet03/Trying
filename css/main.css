@@ -117,10 +117,11 @@ span {
       position: absolute;
       bottom: 0px;
       left: 0px;
-      color: #0077B6;
+      color: #5C4D7D;
       font-family: "Roboto Slab", serif;
       font-weight: 300;
-      line-height: 1.4;
+      font-size: 14px;
+      line-height: 3;
       padding: 5px;
       z-index: 1;
       -webkit-transition: -webkit-transform 0.3s ease; }
