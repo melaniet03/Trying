@@ -114,6 +114,7 @@ span {
       padding: 20px;
       z-index: 10; }
     #bio .bio-item .description {
+      font-weight: bold;
       position: absolute;
       bottom: 0px;
       left: 0px;
