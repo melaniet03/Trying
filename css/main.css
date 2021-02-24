@@ -92,7 +92,7 @@ span {
     height: 100%; }
 
 #bio {
-  padding: 10% 25px;
+  padding: 2% 25px;
   text-align: center; }
   #bio .bio-item {
     display: inline-block;
@@ -185,7 +185,7 @@ span {
   #footer .half {
     width: 100%; }
   #footer .right {
-    text-align: right;
+    text-align: left;
     margin-top: 10px;
     border-top: 1px solid white;
     padding-top: 10px; }
