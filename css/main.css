@@ -87,7 +87,7 @@ span {
     background: 50% 50% / cover;
     background-attachment: fixed;
     background-color: #FCD5CE ;
-    background-image: url(../img/world.gif);
+    background-image: url('../img/world.gif');
     background-position: center center ;
     height: 100%; }
 
