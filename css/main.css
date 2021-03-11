@@ -17,7 +17,8 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d; 
+  background: white; }
 
 a {
   color: #81B29A; }
