@@ -130,7 +130,117 @@
             </form>
  
            <div>
-               <canvas id="pizarra"></canvas>
+               
+         <style>
+              canvas {
+                  width: 500px;
+        height: 500px;
+        background-color: # 0D0909;
+         }
+        </style>
+
+<canvas id = "blackboard"> </canvas>
+
+<script>
+    // =============================================== =======================
+    // VARIABLES
+    // =============================================== =======================
+    let myCanvas = document.querySelector ('#board');
+    let lines = [];
+    let correctionX = 0;
+    let correctionY = 0;
+    let paintLine = false;
+    // Mark the new point
+    let newXPosition = 0;
+    let newYPosition = 0;
+
+    let position = myCanvas.getBoundingClientRect ()
+    correctionX = position.x;
+    correctionY = position.y;
+
+    myCanvas.width = 500;
+    myCanvas.height = 500;
+
+    // =============================================== =======================
+    // FUNCTIONS
+    // =============================================== =======================
+
+    / **
+     * Function that starts to draw the line
+     * /
+    function startDrawing () {
+        paintLine = true;
+        lines.push ([]);
+    };
+    
+    / **
+     * Function that saves the position of the new line
+     * /
+    function saveLine () {
+        lines [lines.length - 1] .push ({
+            x: newXPosition,
+            y: newPositionY
+        });
+    }
+
+    / **
+     * Function draws the line
+     * /
+    function drawLine (event) {
+        event.preventDefault ();
+        if (paintLine) {
+            let ctx = myCanvas.getContext ('2d')
+            // Line styles
+            ctx.lineJoin = ctx.lineCap = 'round';
+            ctx.lineWidth = 10;
+            // Line color
+            ctx.strokeStyle = '#fff';
+            // Mark the new point
+            if (event.changedTouches == undefined) {
+                // Mouse version
+                newPositionX = event.layerX;
+                newPositionY = event.layerY;
+            } else {
+                // Touch version, touch screen
+                newXPosition = event.changedTouches [0] .pageX - correctionX;
+                newYPosition = event.changedTouches [0] .pageY - correctionY;
+            }
+            // Save the line
+            saveLine ();
+            // Redraw all saved lines
+            ctx.beginPath ();
+            lines.forEach (function (segment) {
+                ctx.moveTo (segment [0] .x, segment [0] .y);
+                segment.forEach (function (point, index) {
+                    ctx.lineTo (point.x, point.y);
+                });
+            });
+            ctx.stroke ();
+        }
+    }
+
+    / **
+     * Function that stops drawing the line
+     * /
+    function stopDraw () {
+        paintLine = false;
+        saveLine ();
+    }
+
+    // =============================================== =======================
+    // EVENTS
+    // =============================================== =======================
+
+    // Mouse events
+    myCanvas.addEventListener ('mousedown', startDrawing, false);
+    myCanvas.addEventListener ('mousemove', drawLine, false);
+    myCanvas.addEventListener ('mouseup', stopDraw, false);
+
+    // Touch screen events
+    myCanvas.addEventListener ('touchstart', startDrawing, false);
+    myCanvas.addEventListener ('touchmove', drawLine, false);
+
+</script>
             </div>
             
             
