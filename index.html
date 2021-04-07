@@ -129,31 +129,37 @@
             
             </form>
             
-       <div>
-          <img class="mySlides" src="Trying/img/pili1.jpg">
-          <img class="mySlides" src="Trying/img/pili2.jpg">
-          <img class="mySlides" src="Trying/img/pili3.jpg">
-          <img class="mySlides" src="Trying/img/Kittens.jpg">
-          <img class="mySlides" src="Trying/img/nina.jpg">
-          <img class="mySlides" src="Trying/img/babys.jpg">
+       <div class="w3-content w3-display-container">>
+          <img class="mySlides" src="/Trying/img/pili1.jpg">
+          <img class="mySlides" src="/Trying/img/pili2.jpg">
+          <img class="mySlides" src="/Trying/img/pili3.jpg">
+          <img class="mySlides" src="/Trying/img/Kittens.jpg">
+          <img class="mySlides" src="/Trying/img/nina.jpg">
+          <img class="mySlides" src="/Trying/img/babys.jpg">
+           
        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> 
-           var slideIndex = 1;
-           showDivs(slideIndex);
-        function plusDivs(n) {
-          showDivs(slideIndex += n);
-        }  
-        function showDivs(n) {
-           var i;
-           var x = document.getElementsByClassName("mySlides");
-           if (n > x.length) {slideIndex = 1}
-           if (n < 1) {slideIndex = x.length} ;
-           for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-         }
-           x[slideIndex-1].style.display = "block";
-          }
-   </div>
+    </div>
+ <script>
+   var slideIndex = 1;
+   showDivs(slideIndex);
+
+ function plusDivs(n) {
+  showDivs(slideIndex += n);
+  }
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+            
            
        <!-- Board-->     
     <canvas id="draw" width="700px" height="400px" style="background-color: black;  display: flex; align-items: center; left: 300px;  bottom: 210px;  margin: 10px;"></canvas>
