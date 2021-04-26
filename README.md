@@ -1,9 +1,9 @@
-carawarner.github.io
+yahtclub
 ====================
 
 This is my CSS sandbox:
-http://carawarner.github.io
+https://github.com/melaniet03/Trying
 
-It's not modern. It's not sexy. It's a sandbox.
+I'm still learning but...
 
-"Come on in! The sand is great!"
+I know enough to challenge myself to improve myself.
